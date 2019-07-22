@@ -3,7 +3,7 @@
  * 
  * A word frequency thing
  * 
- * @a[uthor alex vo
+ * @author alex vo
  */
 
 
