@@ -1,0 +1,10 @@
+Quick List of Known Bugs
+
+- Odd behavior with removing punctuation from the beginnings of words
+
+
+Quick List of Future Features
+
+- Optional function to purge common typos
+- Defining input/output/bannedwords during runtime
+- Take program out of CLI
