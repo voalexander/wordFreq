@@ -9,7 +9,6 @@
 
 #include <iostream>
 #include <fstream>
-#include <chrono>
 
 #define MAX_NUM_PUNC 15                                                             /* Number of punctuations to remove */
 #define MAX_BANNED_WORDS 4                                                          /* Number of words to remove */
@@ -98,8 +97,6 @@ void quickSort(int count[], std::string word[], int low, int high);
 
 int main()
 {
-    auto start = std::chrono::high_resolution_clock::now(); /* Timer for runtime */
-    
     std::ifstream input(INPUTFILE_NAME);
     std::ofstream output(OUTPUTFILE_NAME);
     std::string * word = nullptr;                           /* Initialization of word array */
@@ -125,10 +122,6 @@ int main()
 
     delete [] word;                                         /* Make sure to delete these to free up memory */
     delete [] count;                                        /* Technically not required but it's nice to have */
-
-    auto stop = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
-    std::cout << "\n\nTotal Runtime: " << duration.count() << " milliseconds\n\n";
 
     return 0;
 }

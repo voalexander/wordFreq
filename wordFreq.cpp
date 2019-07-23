@@ -13,7 +13,6 @@
 #include <vector>
 #include <map>
 #include <algorithm>
-#include <chrono>
 
 typedef std::map<std::string, int> stringMap;
 typedef std::pair<std::string,int> pair;
@@ -73,8 +72,6 @@ void wordCounter(std::istream& input, stringMap& table);
 
 int main()
 {
-    auto start = std::chrono::high_resolution_clock::now(); /* Timer for runtime */
-    
     std::ifstream input(INPUTFILE_NAME); 
     std::ofstream output(OUTPUTFILE_NAME);
     std::vector<pair> sortedTable;                          /* A vector of type pair */
@@ -97,11 +94,6 @@ int main()
     for(auto const &pair: sortedTable) //output to file
         output << pair.first << "\t" << pair.second << "\n";
     std::cout << "Done\n";
-
-
-    auto stop = std::chrono::high_resolution_clock::now();
-    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
-    std::cout << "\n\nTotal Runtime: " << duration.count() << " milliseconds\n\n";
 
     return 0;
 }
