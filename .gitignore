@@ -67,4 +67,5 @@ tags
 # Ignore all local history of files
 .history
 
+*.xls
 # End of https://www.gitignore.io/api/vim,c++,visualstudiocode
