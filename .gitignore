@@ -68,4 +68,5 @@ tags
 .history
 
 *.xls
+*.json
 # End of https://www.gitignore.io/api/vim,c++,visualstudiocode
